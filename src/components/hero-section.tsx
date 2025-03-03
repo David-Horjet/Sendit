@@ -93,7 +93,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.8 }}
-            className="flex justify-center space-x-8 mb-12"
+            className="flex flex-col sm:flex-row justify-center gap-2 md:gap-5 mb-12"
           >
             <FeatureIcon
               icon={<Globe className="h-6 w-6" />}
@@ -176,7 +176,7 @@ function AnimatedBackground() {
 
 function FeatureIcon({ icon, text }: { icon: React.ReactNode; text: string }) {
   return (
-    <div className="flex items-center space-x-2">
+    <div className="flex items-center gap-1 justify-center">
       <div className="p-2 bg-gradient-to-br from-brand-blue to-brand-teal rounded-lg text-white">
         {icon}
       </div>
