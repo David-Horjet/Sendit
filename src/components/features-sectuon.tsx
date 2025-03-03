@@ -1,62 +1,55 @@
-"use client"
+"use client";
 
-import { useRef } from "react"
-import { motion } from "framer-motion"
-import { ShoppingCart, Sparkles, Wallet, BarChart3, Users, Zap, Globe, Shield, Headphones, Rocket } from 'lucide-react'
+import { motion } from "framer-motion";
+import {
+  CheckCircle2,
+  ShoppingCart,
+  Zap,
+  Wallet,
+  BarChart3,
+  Users,
+  Rocket,
+} from "lucide-react";
 
 export default function FeaturesSection() {
   const features = [
     {
-      icon: <ShoppingCart className="h-8 w-8" />,
-      title: "Seamless Sales & Checkout",
-      description: "Frictionless buying experience with multiple payment options and one-click purchases.",
+      icon: <ShoppingCart className="h-6 w-6" />,
+      title: "Effortless Selling",
+      description:
+        "Launch your store instantly with no setup hassle. Just plug, sell, and start earning without technical barriers.",
     },
     {
-      icon: <Sparkles className="h-8 w-8" />,
-      title: "AI-Powered Revenue Boosters",
-      description: "Smart recommendations and pricing strategies to maximize your earnings.",
+      icon: <Zap className="h-6 w-6" />,
+      title: "AI Optimization",
+      description:
+        "Leverage AI-powered tools to maximize conversions, automate pricing strategies, and boost revenue effortlessly.",
     },
     {
-      icon: <Wallet className="h-8 w-8" />,
-      title: "Crypto-Friendly & Instant Payouts",
-      description: "Get paid in your preferred currency, including major cryptocurrencies.",
+      icon: <Wallet className="h-6 w-6" />,
+      title: "Global Payments",
+      description:
+        "Accept payments worldwide with crypto support, ensuring fast, secure, and borderless transactions for creators and businesses.",
     },
     {
-      icon: <BarChart3 className="h-8 w-8" />,
-      title: "Built-in Analytics & Marketing Tools",
-      description: "Track performance and grow your audience with powerful integrated tools.",
+      icon: <BarChart3 className="h-6 w-6" />,
+      title: "Growth Tools",
+      description:
+        "Access built-in analytics, automated marketing, and referral programs to scale your digital business efficiently.",
     },
     {
-      icon: <Users className="h-8 w-8" />,
-      title: "Thriving Creator Community",
-      description: "Connect with like-minded creators and collaborate on new opportunities.",
-    },
-    {
-      icon: <Zap className="h-8 w-8" />,
-      title: "Lightning-Fast Delivery",
-      description: "Instant digital product delivery to customers worldwide.",
-    },
-    {
-      icon: <Globe className="h-8 w-8" />,
-      title: "Global Marketplace",
-      description: "Reach customers from every corner of the world with multi-language support.",
-    },
-    {
-      icon: <Shield className="h-8 w-8" />,
-      title: "Advanced Security",
-      description: "State-of-the-art encryption and fraud protection for peace of mind.",
-    },
-    {
-      icon: <Headphones className="h-8 w-8" />,
-      title: "24/7 Customer Support",
-      description: "Round-the-clock assistance for both sellers and buyers.",
+      icon: <Users className="h-6 w-6" />,
+      title: "Creator Network",
+      description:
+        "Join a thriving community of alpha traders, creators, and innovators collaborating and growing together.",
     },
     {
       icon: <Rocket className="h-8 w-8" />,
-      title: "Scalable Infrastructure",
-      description: "Built to handle from small startups to enterprise-level operations.",
+      title: "Scalable System",
+      description:
+        "Designed to support businesses of all sizes, from small startups to enterprise-level operations, without performance bottlenecks.",
     },
-  ]
+  ];
 
   const gradients = [
     "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
@@ -64,78 +57,57 @@ export default function FeaturesSection() {
     "linear-gradient(135deg, #007adf 0%, #00ecbc 100%)",
     "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
     "linear-gradient(135deg, #fad961 0%, #f76b1c 100%)",
-  ]
-
-  const rowVariants = {
-    animate: (i: number) => ({
-      x: i % 2 === 0 ? ["0%", "-100%"] : ["-100%", "0%"],
-      transition: {
-        x: {
-          repeat: Infinity,
-          repeatType: "loop",
-          duration: 50,
-          ease: "linear",
-        },
-      },
-    }),
-  }
-
+  ];
   return (
-    <section id="features" className="py-20 md:py-40 bg-[#050505] overflow-hidden">
+    <section id="features" className="py-20 md:py-32 bg-[#050505]">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <motion.h2
-            className="text-4xl md:text-5xl font-bold mb-4 text-transparent"
-            style={{
-              backgroundImage: "linear-gradient(135deg, #223d40 0%, #ffffff 50%, #223d40 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            Powerful Features for Digital Creators
-          </motion.h2>
-          <motion.p
-            className="text-xl text-gray-300 max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            Everything you need to create, sell, and grow your digital business
-          </motion.p>
-        </div>
+        <motion.h2
+          className="text-4xl md:text-5xl font-bold mb-5 text-center text-transparent bg-clip-text bg-gradient-to-r from-[#223d40] via-white to-[#223d40]"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          Powerful Features for Digital Creators
+        </motion.h2>
 
-        {[0, 1, 2].map((rowIndex) => (
-          <div key={rowIndex} className="relative mb-12 h-[280px] overflow-hidden">
+        <motion.p
+          className="text-xl text-gray-300 max-w-2xl mb-20 mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          Everything you need to create, sell, and grow your digital business
+        </motion.p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {features.map((feature, index) => (
             <motion.div
-              className="absolute flex whitespace-nowrap"
-              variants={rowVariants}
-              animate="animate"
-              custom={rowIndex}
+              key={index}
+              className="flex flex-col justify-start bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-700 transition-all duration-300 hover:border-[#223d40]/50"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              whileHover={{ scale: 1.05 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              {[...features, ...features].slice(rowIndex * 4, rowIndex * 4 + 8).map((feature, index) => (
-                <div
-                  key={index}
-                  className="w-[280px] mx-4 bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-700 transition-all duration-300 hover:border-[#223d40]/50"
-                >
-                  <div
-                    className="mb-4 p-3 rounded-xl inline-block"
-                    style={{ background: gradients[index % gradients.length] }}
-                  >
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2 text-white">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
-              ))}
+              <div
+                className="mb-4 p-3 rounded-xl inline-block w-fit"
+                style={{ background: gradients[index % gradients.length] }}
+              >
+                {feature.icon}
+              </div>
+              <h3 className="text-2xl font-semibold mb-2 text-white">
+                {feature.title}
+              </h3>
+              <p className="text-gray-300 text-base flex-grow overflow-hidden">
+                {feature.description}
+              </p>
             </motion.div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
-  )
+  );
 }

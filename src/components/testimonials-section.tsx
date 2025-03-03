@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import Image from "next/image";
 import { Button } from "./ui/buttons";
+import avatar from "../../public/avatar.jpeg"
 
 const testimonials = [
   {
@@ -128,10 +129,7 @@ export default function TestimonialsSection() {
                     <div className="flex-shrink-0">
                       <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-brand-blue/20">
                         <Image
-                          src={
-                            testimonials[currentIndex].image ||
-                            "/placeholder.svg"
-                          }
+                          src={avatar}
                           alt={testimonials[currentIndex].name}
                           fill
                           className="object-cover"

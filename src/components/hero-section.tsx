@@ -42,7 +42,7 @@ export default function HeroSection() {
             className="mb-8"
           >
             <h1
-              className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 bg-clip-text bg-gradient-to-r from-[#223d40] via-white to-[#223d40]"
+              className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 bg-clip-text bg-gradient-to-r from-[#0fd3e9] via-white to-[#223d40]"
               style={{
                 backgroundImage:
                   "linear-gradient(135deg,rgb(197, 218, 220) 0%, #ffffff 50%,rgb(201, 242, 247) 100%)",

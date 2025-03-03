@@ -124,7 +124,7 @@ function StepItem({
     >
       <div className="flex-1">
         <div className="flex items-center mb-4">
-          <div className="text-5xl font-bold text-brand-blue/30 mr-4">
+          <div className="text-5xl font-bold text-[#223d40] mr-4">
             {step.number}
           </div>
           <h3 className="text-2xl md:text-3xl font-bold text-white">
@@ -133,7 +133,7 @@ function StepItem({
         </div>
         <p className="text-lg text-gray-300 mb-6">{step.description}</p>
         <motion.div
-          className="inline-flex items-center text-brand-blue font-semibold"
+          className="inline-flex items-center text-[#223d40] font-semibold"
           whileHover={{ x: 5 }}
         >
           Learn more <ArrowRight className="ml-2 h-5 w-5" />

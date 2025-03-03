@@ -1,12 +1,14 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { BellIcon as BrandTelegram } from "lucide-react"
-import { Button } from "./ui/buttons"
+import { motion } from "framer-motion";
+import { BellIcon as BrandTelegram } from "lucide-react";
+import { Button } from "./ui/buttons";
 
 export default function CtaSection() {
   return (
-    <section className="py-20 md:py-40 bg-[#050505]">
+    <section
+      className="py-20 md:py-40 bg-[#050505]"
+    >
       <div className="container mx-auto px-4">
         <motion.div
           className="max-w-4xl mx-auto text-center bg-gradient-to-r from-gray-800 to-gray-700 rounded-3xl p-8 md:p-16 border border-gray-600 shadow-2xl relative overflow-hidden"
@@ -14,6 +16,9 @@ export default function CtaSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
+          style={{
+            background: "linear-gradient(135deg, #6a11cb 0%, #2575fc 100%)",
+          }}
         >
           {/* Background decoration */}
           <div className="absolute inset-0 opacity-30">
@@ -38,8 +43,9 @@ export default function CtaSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              Be among the first to access our platform and help us build the future of digital commerce. Early adopters
-              get exclusive benefits and lifetime discounts.
+              Be among the first to access our platform and help us build the
+              future of digital commerce. Early adopters get exclusive benefits
+              and lifetime discounts.
             </motion.p>
             <motion.div
               className="flex flex-col sm:flex-row items-center justify-center gap-4"
@@ -66,6 +72,5 @@ export default function CtaSection() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
-
