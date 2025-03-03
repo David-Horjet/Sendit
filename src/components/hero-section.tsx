@@ -127,52 +127,52 @@ export default function HeroSection() {
   );
 }
 
-function AnimatedBackground() {
-  return (
-    <div className="absolute inset-0 overflow-hidden">
-      {/* Animated gradient blobs */}
-      <motion.div
-        className="absolute top-1/4 left-1/4 w-[800px] h-[800px] rounded-full bg-gradient-to-r from-brand-blue/20 to-brand-teal/20 blur-[120px]"
-        animate={{
-          x: [0, 50, -50, 0],
-          y: [0, -50, 50, 0],
-          scale: [1, 1.1, 0.9, 1],
-        }}
-        transition={{
-          duration: 20,
-          repeat: Number.POSITIVE_INFINITY,
-          repeatType: "reverse",
-        }}
-      />
-      <motion.div
-        className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] rounded-full bg-gradient-to-r from-brand-red/10 to-brand-blue/10 blur-[100px]"
-        animate={{
-          x: [0, -50, 50, 0],
-          y: [0, 50, -50, 0],
-          scale: [1, 0.9, 1.1, 1],
-        }}
-        transition={{
-          duration: 18,
-          repeat: Number.POSITIVE_INFINITY,
-          repeatType: "reverse",
-        }}
-      />
-      <motion.div
-        className="absolute top-1/2 right-1/3 w-[500px] h-[500px] rounded-full bg-gradient-to-r from-brand-teal/15 to-brand-blue/15 blur-[80px]"
-        animate={{
-          x: [0, 70, -70, 0],
-          y: [0, -70, 70, 0],
-          scale: [1, 1.2, 0.8, 1],
-        }}
-        transition={{
-          duration: 22,
-          repeat: Number.POSITIVE_INFINITY,
-          repeatType: "reverse",
-        }}
-      />
-    </div>
-  );
-}
+// function AnimatedBackground() {
+//   return (
+//     <div className="absolute inset-0 overflow-hidden">
+//       {/* Animated gradient blobs */}
+//       <motion.div
+//         className="absolute top-1/4 left-1/4 w-[800px] h-[800px] rounded-full bg-gradient-to-r from-brand-blue/20 to-brand-teal/20 blur-[120px]"
+//         animate={{
+//           x: [0, 50, -50, 0],
+//           y: [0, -50, 50, 0],
+//           scale: [1, 1.1, 0.9, 1],
+//         }}
+//         transition={{
+//           duration: 20,
+//           repeat: Number.POSITIVE_INFINITY,
+//           repeatType: "reverse",
+//         }}
+//       />
+//       <motion.div
+//         className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] rounded-full bg-gradient-to-r from-brand-red/10 to-brand-blue/10 blur-[100px]"
+//         animate={{
+//           x: [0, -50, 50, 0],
+//           y: [0, 50, -50, 0],
+//           scale: [1, 0.9, 1.1, 1],
+//         }}
+//         transition={{
+//           duration: 18,
+//           repeat: Number.POSITIVE_INFINITY,
+//           repeatType: "reverse",
+//         }}
+//       />
+//       <motion.div
+//         className="absolute top-1/2 right-1/3 w-[500px] h-[500px] rounded-full bg-gradient-to-r from-brand-teal/15 to-brand-blue/15 blur-[80px]"
+//         animate={{
+//           x: [0, 70, -70, 0],
+//           y: [0, -70, 70, 0],
+//           scale: [1, 1.2, 0.8, 1],
+//         }}
+//         transition={{
+//           duration: 22,
+//           repeat: Number.POSITIVE_INFINITY,
+//           repeatType: "reverse",
+//         }}
+//       />
+//     </div>
+//   );
+// }
 
 function FeatureIcon({ icon, text }: { icon: React.ReactNode; text: string }) {
   return (

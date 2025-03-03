@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import {
-  CheckCircle2,
   ShoppingCart,
   Zap,
   Wallet,

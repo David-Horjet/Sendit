@@ -1,16 +1,16 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 export default function HowItWorksSection() {
   const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
+  // const { scrollYProgress } = useScroll({
+  //   target: ref,
+  //   offset: ["start end", "end start"],
+  // });
 
   const steps = [
     {
@@ -76,7 +76,7 @@ export default function HowItWorksSection() {
               key={index}
               step={step}
               index={index}
-              scrollYProgress={scrollYProgress}
+              // scrollYProgress={scrollYProgress}
             />
           ))}
         </div>
@@ -88,7 +88,7 @@ export default function HowItWorksSection() {
 function StepItem({
   step,
   index,
-  scrollYProgress,
+  // scrollYProgress,
 }: {
   step: {
     number: string;
@@ -97,14 +97,14 @@ function StepItem({
     image: string;
   };
   index: number;
-  scrollYProgress: any;
+  // scrollYProgress: any;
 }) {
   const isEven = index % 2 === 0;
   const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress: itemProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "center center"],
-  });
+  // const { scrollYProgress: itemProgress } = useScroll({
+  //   target: ref,
+  //   offset: ["start end", "center center"],
+  // });
 
   //   const opacity = useTransform(itemProgress, [0, 0.5, 1], [0.3, 1, 0.3]);
   //   const scale = useTransform(itemProgress, [0, 0.5, 1], [0.8, 1, 0.8]);

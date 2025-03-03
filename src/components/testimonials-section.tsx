@@ -139,7 +139,7 @@ export default function TestimonialsSection() {
                     <div className="flex-1 text-center md:text-left">
                       <Quote className="h-10 w-10 text-brand-blue/30 mb-4 mx-auto md:mx-0" />
                       <p className="text-lg md:text-xl mb-6 italic text-gray-300">
-                        "{testimonials[currentIndex].content}"
+                        {`"{testimonials[currentIndex].content}"`}
                       </p>
                       <div>
                         <h4 className="text-lg font-semibold text-white">
